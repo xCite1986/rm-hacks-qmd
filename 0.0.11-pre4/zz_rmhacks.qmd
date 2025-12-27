@@ -1,0 +1,21 @@
+; rm-hacks-qmd v0.0.11-pre4 - 3.24 PORTING TEST
+; Hash format discovery: Both hash and length are BIG-ENDIAN in hashtab!
+VERSION 3.24.0.149
+
+; === BASE (required) ===
+LOAD rmHacks/base/global.qmd
+
+; === CONFIRMED WORKING (8 hacks) ===
+LOAD rmHacks/new_notebook_date_name_hack.qmd
+LOAD rmHacks/alphabetize_tags_list_hack.qmd
+LOAD rmHacks/all_mono_hack.qmd
+LOAD rmHacks/light_sleep_icon_hack.qmd
+LOAD rmHacks/screenshare_everywhere_hack.qmd
+LOAD rmHacks/auto_new_page_hack.qmd
+LOAD rmHacks/document_pages_hide_hack.qmd
+
+; === TOOLBAR HACKS - Need QML structure analysis ===
+; The hash 2857280009207495592 does NOT exist in 3.24
+; New Toolbar.qml hash: 11313888899523275277
+; But internal QML structure changed (no FocusScope > Loader#closeButton)
+; LOAD rmHacks/hide_close_button_hack.qmd

@@ -1,0 +1,12 @@
+; Test hack to verify we can access Toolbar.qml in 3.24
+; Using CORRECT hash: 11313888899523275277 for /qt/qml/xofm/libs/toolbar/qml/Toolbar.qml
+; (Both hash and length in hashtab are big-endian!)
+
+AFFECT [[11313888899523275277]]
+    TRAVERSE [[8397993708429497603]]
+        LOCATE BEFORE ALL
+        INSERT {
+            property bool rmhTestToolbar324: true
+        }
+    END TRAVERSE
+END AFFECT
